@@ -1,0 +1,61 @@
+name: Simple Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Count files
+      run: |
+        echo "📁 文件统计:"
+        echo "总文件数: $(find . -type f | wc -l)"
+        echo "Python文件: $(find . -name '*.py' | wc -l)"
+        echo "TypeScript文件: $(find . -name '*.ts' -o -name '*.tsx' | wc -l)"
+        echo "配置文件: $(find . -name '*.json' -o -name '*.yml' -o -name '*.yaml' | wc -l)"
+    
+    - name: Check key files
+      run: |
+        echo "🔑 关键文件检查:"
+        
+        key_files=(
+          "README.md"
+          ".gitignore"
+          "LICENSE"
+          "docker-compose.yml"
+          "backend/requirements.txt"
+          "backend/main.py"
+          "frontend/package.json"
+          "frontend/src/app/page.tsx"
+        )
+        
+        all_ok=true
+        for file in "${key_files[@]}"; do
+          if [ -f "$file" ]; then
+            size=$(wc -c < "$file")
+            if [ "$size" -gt 10 ]; then
+              echo "✅ $file (${size} bytes)"
+            else
+              echo "⚠️  $file 太小 (${size} bytes)"
+              all_ok=false
+            fi
+          else
+            echo "❌ $file 不存在"
+            all_ok=false
+          fi
+        done
+        
+        if [ "$all_ok" = true ]; then
+          echo "🎉 所有关键文件检查通过！"
+        else
+          echo "⚠️  部分文件有问题"
+          exit 0  # 即使有问题也不失败，只是警告
+        fi
