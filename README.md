@@ -1,1 +1,175 @@
-IyBMb2NhbCBTbWFydCBEb2MKCuS4gOS4quacrOWcsOWMlueahOaZuuiDveaWh+aho+mXruetlOezu+e7n++8jOaUr+aMgeaWh+aho+S4iuS8oOOAgeWQkemHj+WtmOWCqOWSjOWfuuS6jlJBR+eahOaZuuiDvemXruetlOOAggoKIyMg8J+OryDpobnnm67nm67moIcKCuaehOW7uuS4gOS4quWujOWFqOacrOWcsOWMlueahOaWh+aho+aZuuiDveWKqeaJi++8jOaUr+aMge+8mgotIPCfk4Qg5paH5qGj5LiK5Lyg5LiO6Kej5p6Q77yIUERGLCBXb3JkLCBFeGNlbCwgVFhU562J77yJCi0g8J+XhO+4jyDlkJHph4/mlbDmja7lupPlrZjlgqjvvIhDaHJvbWEvUWRyYW5077yJCi0g8J+kliDmnKzlnLBMTE3pm4bmiJDvvIhPbGxhbWHvvIkKLSDwn5SNIFJBR++8iOajgOe0ouWinuW8uueUn+aIkO+8iemXruetlAotIPCfjJAg5Y+L5aW955qEV2Vi55WM6Z2iCgojIyDwn4+X77iPIOaKgOacr+agiAoKIyMjIOWQjuerryAoUHl0aG9uKQotICoqV2Vi5qGG5p62Kio6IEZhc3RBUEkKLSAqKuWQkemHj+aVsOaNruW6kyoqOiBDaHJvbWFEQiAvIFFkcmFudAotICoq5paH5qGj6Kej5p6QKio6IFVuc3RydWN0dXJlZCwgUHlQREYyLCBweXRob24tZG9jeAotICoqUkFH5qGG5p62Kio6IExhbmdDaGFpbiAvIExsYW1hSW5kZXgKLSAqKkxMTembhuaIkCoqOiBPbGxhbWEgQVBJCi0gKirku7vliqHpmJ/liJcqKjogQ2VsZXJ5ICjlj6/pgIkpCgojIyMg5YmN56uvIChUeXBlU2NyaXB0KQotICoq5qGG5p62Kio6IE5leHQuanMgMTQgLyBSZWFjdAotICoqVUnlupMqKjogU2hhZGNuL3VpICsgVGFpbHdpbmQgQ1NTCi0gKirnirbmgIHnrqHnkIYqKjogWnVzdGFuZAotICoqSFRUUOWuouaIt+erryoqOiBBeGlvcyAvIFRhblN0YWNrIFF1ZXJ5Ci0gKirmnoTlu7rlt6XlhbcqKjogVml0ZSAo5Y+v6YCJKQoKIyMjIOW8gOWPkeW3peWFtwotICoq5Luj56CB6LSo6YePKio6IEJsYWNrLCBpc29ydCwgZmxha2U4IChQeXRob24pLCBFU0xpbnQsIFByZXR0aWVyIChUUykKLSAqKua1i+ivlSoqOiBweXRlc3QsIEplc3QsIFJlYWN0IFRlc3RpbmcgTGlicmFyeQotICoq5a655Zmo5YyWKio6IERvY2tlciArIERvY2tlciBDb21wb3NlCi0gKipDSS9DRCoqOiBHaXRIdWIgQWN0aW9ucwoKIyMg8J+TgSDpobnnm67nu5PmnoQKCmBgYApsb2NhbF9zbWFydF9kb2MvCuKUnOKUgOKUgCBiYWNrZW5kLyAgICAgICAgICAgICAgICAgIyBQeXRob27lkI7nq68K4pSCICAg4pSc4pSA4pSAIGFwcC8gICAgICAgICAgICAgICAgIyBGYXN0QVBJ5bqU55SoCuKUgiAgIOKUnOKUgOKUgCBjb3JlLyAgICAgICAgICAgICAgICMg5qC45b+D6YC76L6RCuKUgiAgIOKUnOKUgOKUgCBtb2RlbHMvICAgICAgICAgICAgICMg5pWw5o2u5qih5Z6LCuKUgiAgIOKUnOKUgOKUgCBzZXJ2aWNlcy8gICAgICAgICAgICMg5Lia5Yqh5pyN5YqhCuKUgiAgIOKUnOKUgOKUgCB1dGlscy8gICAgICAgICAgICAgICMg5bel5YW35Ye95pWwCuKUgiAgIOKUnOKUgOKUgCB0ZXN0cy8gICAgICAgICAgICAgICMg5rWL6K+VCuKUgiAgIOKUnOKUgOKUgCByZXF1aXJlbWVudHMudHh0ICAgICMgUHl0aG9u5L6d6LWWCuKUgiAgIOKUlOKUgOKUgCBtYWluLnB5ICAgICAgICAgICAgIyDlhaXlj6Pmlofku7YK4pSc4pSA4pSAIGZyb250ZW5kLyAgICAgICAgICAgICAgICMgVHlwZVNjcmlwdOWJjeerrwrilIIgICDilJzilIDilIAgc3JjLwrilIIgICDilIIgICDilJzilIDilIAgYXBwLyAgICAgICAgICAgIyBOZXh0LmpzIEFwcCBSb3V0ZXIK4pSCICAg4pSCICAg4pSc4pSA4pSAIGNvbXBvbmVudHMvICAgICMgUmVhY3Tnu4Tku7YK4pSCICAg4pSCICAg4pSc4pSA4pSAIGxpYi8gICAgICAgICAgIyDlt6XlhbflupMK4pSCICAg4pSCICAg4pSc4pSA4pSAIHR5cGVzLyAgICAgICAgIyBUeXBlU2NyaXB057G75Z6LCuKUgiAgIOKUgiAgIOKUlOKUgOKUgCBzdHlsZXMvICAgICAgICMg5qC35byP5paH5Lu2CuKUgiAgIOKUnOKUgOKUgCBwdWJsaWMvICAgICAgICAgICAgIyDpnZnmgIHotYTmupAK4pSCICAg4pSc4pSA4pSAIHBhY2thZ2UuanNvbiAgICAgICAjIOS+nei1lumFjee9rgrilIIgICDilJTilIDilIAgbmV4dC5jb25maWcuanMgICAgIyBOZXh0Lmpz6YWN572uCuKUnOKUgOKUgCBkb2NzLyAgICAgICAgICAgICAgICAgICMg6aG555uu5paH5qGjCuKUnOKUgOKUgCBzY3JpcHRzLyAgICAgICAgICAgICAgIyDpg6jnvbIv5bel5YW36ISa5pysCuKUnOKUgOKUgCBkb2NrZXIvICAgICAgICAgICAgICAgIyBEb2NrZXLphY3nva4K4pSc4pSA4pSAIC5naXRodWIvd29ya2Zsb3dzLyAgICAjIENJL0NE6YWN572uCuKUnOKUgOKUgCBkb2NrZXItY29tcG9zZS55bWwgICAgIyDlvIDlj5Hnjq/looPnvJbmjpIK4pSc4pSA4pSAIC5lbnYuZXhhbXBsZSAgICAgICAgICMg546v5aKD5Y+Y6YeP56S65L6LCuKUlOKUgOKUgCBSRUFETUUubWQgICAgICAgICAgICAjIOmhueebruivtOaYjgpgYGAKCiMjIPCfmoAg5b+r6YCf5byA5aeLCgojIyMg546v5aKD6KaB5rGCCi0gUHl0aG9uIDMuMTArCi0gTm9kZS5qcyAxOCsKLSBEb2NrZXIgJiBEb2NrZXIgQ29tcG9zZSAo5Y+v6YCJKQotIE9sbGFtYSAo5pys5ZywTExNKQoKIyMjIOW8gOWPkeeOr+Wig+iuvue9rgpgYGBiYXNoCiMgMS4g5YWL6ZqG6aG555uuCmdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vUmVkZXN0aW55L2xvY2FsX3NtYXJ0X2RvYy5naXQKY2QgbG9jYWxfc21hcnRfZG9jCgojIDIuIOWQjuerr+iuvue9rgpjZCBiYWNrZW5kCnB5dGhvbiAtbSB2ZW52IHZlbnYKc291cmNlIHZlbnYvYmluL2FjdGl2YXRlICAjIFdpbmRvd3M6IHZlbnZcU2NyaXB0c1xhY3RpdmF0ZQpwaXAgaW5zdGFsbCAtciByZXF1aXJlbWVudHMudHh0CgojIDMuIOWJjeerr+iuvue9rgpjZCAuLi9mcm9udGVuZApucG0gaW5zdGFsbAoKIyA0LiDlkK/liqjmnI3liqEKIyDlkI7nq68gKOerr+WPoyA4MDAwKQpjZCBiYWNrZW5kICYmIHV2aWNvcm4gbWFpbjphcHAgLS1yZWxvYWQKCiMg5YmN56uvICjnq6/lj6MgMzAwMCkKY2QgZnJvbnRlbmQgJiYgbnBtIHJ1biBkZXYKYGBgCgojIyDwn5SnIOmFjee9ruivtOaYjgoKIyMjIOeOr+Wig+WPmOmHjwrlpI3liLYgYC5lbnYuZXhhbXBsZWAg5Li6IGAuZW52YCDlubbphY3nva7vvJoKYGBgZW52CiMg5ZCO56uv6YWN572uCkRBVEFCQVNFX1VSTD1zcWxpdGU6Ly8vLi9sb2NhbF9zbWFydF9kb2MuZGIKVkVDVE9SX0RCX1BBVEg9Li9kYXRhL3ZlY3Rvcl9kYgpPTExBTUFfQkFTRV9VUkw9aHR0cDovL2xvY2FsaG9zdDoxMTQzNApPTExBTUFfTU9ERUw9bGxhbWEzLjIKCiMg5YmN56uv6YWN572uCk5FWFRfUFVCTElDX0FQSV9VUkw9aHR0cDovL2xvY2FsaG9zdDo4MDAwCmBgYAoKIyMjIE9sbGFtYSDorr7nva4KYGBgYmFzaAojIOWuieijhSBPbGxhbWEKY3VybCAtZnNTTCBodHRwczovL29sbGFtYS5jb20vaW5zdGFsbC5zaCB8IHNoCgojIOS4i+i9veaooeWeiwpvbGxhbWEgcHVsbCBsbGFtYTMuMgpvbGxhbWEgcHVsbCBub21pYy1lbWJlZC10ZXh0CmBgYAoKIyMg8J+TliDlip/og73op4TliJIKCiMjIyBQaGFzZSAxOiBNVlAgKOWfuuehgOWKn+iDvSkKLSBbIF0g5paH5qGj5LiK5Lyg5o6l5Y+jCi0gWyBdIOaWh+acrOaPkOWPluS4juWIhuWdlwotIFsgXSDlkJHph4/ltYzlhaXkuI7lrZjlgqgKLSBbIF0g5Z+656GA6Zeu562U5o6l5Y+jCi0gWyBdIOeugOWNlVdlYueVjOmdogoKIyMjIFBoYXNlIDI6IOWinuW8uuWKn+iDvQotIFsgXSDlpJrmoLzlvI/mlofmoaPmlK/mjIEKLSBbIF0g5a+56K+d5Y6G5Y+y566h55CGCi0gWyBdIOaWh+aho+euoeeQhueVjOmdogotIFsgXSDmkJzntKLkvJjljJYKLSBbIF0g55So5oi36K6k6K+BCgojIyMgUGhhc2UgMzog6auY57qn5Yqf6IO9Ci0gWyBdIOaJuemHj+WkhOeQhgotIFsgXSBBUEnlr4bpkqXnrqHnkIYKLSBbIF0g5o+S5Lu257O757ufCi0gWyBdIOenu+WKqOerr+mAgumFjQotIFsgXSDnprvnur/mqKHlvI8KCiMjIPCfpJ0g6LSh54yu5oyH5Y2XCgoxLiBGb3JrIOmhueebrgoyLiDliJvlu7rlip/og73liIbmlK8gKGBnaXQgY2hlY2tvdXQgLWIgZmVhdHVyZS9hbWF6aW5nLWZlYXR1cmVgKQozLiDmj5DkuqTmm7TmlLkgKGBnaXQgY29tbWl0IC1tICdBZGQgYW1hemluZyBmZWF0dXJlJ2ApCjQuIOaOqOmAgeWIsOWIhuaUryAoYGdpdCBwdXNoIG9yaWdpbiBmZWF0dXJlL2FtYXppbmctZmVhdHVyZWApCjUuIOWIm+W7uiBQdWxsIFJlcXVlc3QKCiMjIPCfk4Qg6K645Y+v6K+BCgpNSVQgTGljZW5zZSAtIOivpuingSBbTElDRU5TRV0oTElDRU5TRSkg5paH5Lu2CgojIyDwn5mPIOiHtOiwogoKLSBbT2xsYW1hXShodHRwczovL29sbGFtYS5jb20vKSAtIOacrOWcsExMTei/kOihjAotIFtMYW5nQ2hhaW5dKGh0dHBzOi8vd3d3LmxhbmdjaGFpbi5jb20vKSAtIFJBR+ahhuaetgotIFtDaHJvbWFdKGh0dHBzOi8vd3d3LnRyeWNocm9tYS5jb20vKSAtIOWQkemHj+aVsOaNruW6kwotIFtGYXN0QVBJXShodHRwczovL2Zhc3RhcGkudGlhbmdvbG8uY29tLykgLSBQeXRob24gV2Vi5qGG5p62Ci0gW05leHQuanNdKGh0dHBzOi8vbmV4dGpzLm9yZy8pIC0gUmVhY3TmoYbmnrYKCiMjIPCfk54g6IGU57O7CgrlpoLmnInpl67popjmiJblu7rorq7vvIzor7fpgJrov4dHaXRIdWIgSXNzdWVz5o+Q5Lqk44CCCgotLS0KCioq5rOo5oSPKio6IOacrOmhueebruWkhOS6juaXqeacn+W8gOWPkemYtuaute+8jEFQSeWSjOWKn+iDveWPr+iDveS8muaciei+g+Wkp+WPmOWMluOAggo=
+# Local Smart Doc
+
+一个本地化的智能文档问答系统，支持文档上传、向量存储和基于RAG的智能问答。
+
+## 🎯 项目目标
+
+构建一个完全本地化的文档智能助手，支持：
+- 📄 文档上传与解析（PDF, Word, Excel, TXT等）
+- 🗄️ 向量数据库存储（Chroma/Qdrant）
+- 🤖 本地LLM集成（Ollama）
+- 🔍 RAG（检索增强生成）问答
+- 🌐 友好的Web界面
+
+## 🏗️ 技术栈
+
+### 后端 (Python)
+- **Web框架**: FastAPI
+- **向量数据库**: ChromaDB / Qdrant
+- **文档解析**: Unstructured, PyPDF2, python-docx
+- **RAG框架**: LangChain / LlamaIndex
+- **LLM集成**: Ollama API
+- **任务队列**: Celery (可选)
+
+### 前端 (TypeScript)
+- **框架**: Next.js 14 / React
+- **UI库**: Shadcn/ui + Tailwind CSS
+- **状态管理**: Zustand
+- **HTTP客户端**: Axios / TanStack Query
+- **构建工具**: Vite (可选)
+
+### 开发工具
+- **代码质量**: Black, isort, flake8 (Python), ESLint, Prettier (TS)
+- **测试**: pytest, Jest, React Testing Library
+- **容器化**: Docker + Docker Compose
+- **CI/CD**: GitHub Actions
+
+## 📁 项目结构
+
+```
+local_smart_doc/
+├── backend/                 # Python后端
+│   ├── app/                # FastAPI应用
+│   ├── core/               # 核心逻辑
+│   ├── models/             # 数据模型
+│   ├── services/           # 业务服务
+│   ├── utils/              # 工具函数
+│   ├── tests/              # 测试
+│   ├── requirements.txt    # Python依赖
+│   └── main.py            # 入口文件
+├── frontend/               # TypeScript前端
+│   ├── src/
+│   │   ├── app/           # Next.js App Router
+│   │   ├── components/    # React组件
+│   │   ├── lib/          # 工具库
+│   │   ├── types/        # TypeScript类型
+│   │   └── styles/       # 样式文件
+│   ├── public/            # 静态资源
+│   ├── package.json       # 依赖配置
+│   └── next.config.js    # Next.js配置
+├── docs/                  # 项目文档
+├── scripts/              # 部署/工具脚本
+├── docker/               # Docker配置
+├── .github/workflows/    # CI/CD配置
+├── docker-compose.yml    # 开发环境编排
+├── .env.example         # 环境变量示例
+└── README.md            # 项目说明
+```
+
+## 🚀 快速开始
+
+### 环境要求
+- Python 3.10+
+- Node.js 18+
+- Docker & Docker Compose (可选)
+- Ollama (本地LLM)
+
+### 开发环境设置
+```bash
+# 1. 克隆项目
+git clone https://github.com/Redestiny/local_smart_doc.git
+cd local_smart_doc
+
+# 2. 后端设置
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# 3. 前端设置
+cd ../frontend
+npm install
+
+# 4. 启动服务
+# 后端 (端口 8000)
+cd backend && uvicorn main:app --reload
+
+# 前端 (端口 3000)
+cd frontend && npm run dev
+```
+
+## 🔧 配置说明
+
+### 环境变量
+复制 `.env.example` 为 `.env` 并配置：
+```env
+# 后端配置
+DATABASE_URL=sqlite:///./local_smart_doc.db
+VECTOR_DB_PATH=./data/vector_db
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.2
+
+# 前端配置
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+### Ollama 设置
+```bash
+# 安装 Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 下载模型
+ollama pull llama3.2
+ollama pull nomic-embed-text
+```
+
+## 📖 功能规划
+
+### Phase 1: MVP (基础功能)
+- [ ] 文档上传接口
+- [ ] 文本提取与分块
+- [ ] 向量嵌入与存储
+- [ ] 基础问答接口
+- [ ] 简单Web界面
+
+### Phase 2: 增强功能
+- [ ] 多格式文档支持
+- [ ] 对话历史管理
+- [ ] 文档管理界面
+- [ ] 搜索优化
+- [ ] 用户认证
+
+### Phase 3: 高级功能
+- [ ] 批量处理
+- [ ] API密钥管理
+- [ ] 插件系统
+- [ ] 移动端适配
+- [ ] 离线模式
+
+## 🤝 贡献指南
+
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建 Pull Request
+
+## 📄 许可证
+
+MIT License - 详见 [LICENSE](LICENSE) 文件
+
+## 🙏 致谢
+
+- [Ollama](https://ollama.com/) - 本地LLM运行
+- [LangChain](https://www.langchain.com/) - RAG框架
+- [Chroma](https://www.trychroma.com/) - 向量数据库
+- [FastAPI](https://fastapi.tiangolo.com/) - Python Web框架
+- [Next.js](https://nextjs.org/) - React框架
+
+## 📞 联系
+
+如有问题或建议，请通过GitHub Issues提交。
+
+---
+
+**注意**: 本项目处于早期开发阶段，API和功能可能会有较大变化。
