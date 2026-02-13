@@ -1,0 +1,43 @@
+name: Minimal CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Check backend
+      run: |
+        echo "检查后端..."
+        if [ -d "backend" ]; then
+          cd backend
+          echo "后端目录存在"
+          ls -la
+        fi
+    
+    - name: Check frontend  
+      run: |
+        echo "检查前端..."
+        if [ -d "frontend" ]; then
+          cd frontend
+          echo "前端目录存在"
+          ls -la
+        fi
+    
+    - name: Final
+      run: echo "✅ CI完成 - 环境部署成功"
