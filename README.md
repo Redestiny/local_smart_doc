@@ -1,25 +1,25 @@
-# Local Smart Doc - EV Knowledge Q&A System
+# Local Smart Doc
 
-A production-ready RAG application for Expected Value knowledge question answering.
+EV Knowledge Q&A System with RAG (Retrieval Augmented Generation).
 
 ## Tech Stack
 
 - **Frontend**: Next.js 14 + TypeScript + TailwindCSS
 - **Backend**: FastAPI + Python 3.11
-- **RAG**: LangChain + ChromaDB
-- **Database**: PostgreSQL
-- **Deployment**: Docker + Docker Compose
+- **Database**: PostgreSQL + ChromaDB
+- **Deployment**: Docker Compose
 
 ## Quick Start
 
 ```bash
-# Clone and start
-cp env.example .env
-# Edit .env with your settings
+# Configure environment
+cp backend/.env.example backend/.env
+# Edit backend/.env and set OPENAI_API_KEY
 
+# Start all services
 docker-compose up -d
 
-# Access the app
+# Access
 # Frontend: http://localhost:3000
 # API: http://localhost:8000/docs
 ```
@@ -28,37 +28,28 @@ docker-compose up -d
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| DATABASE_URL | PostgreSQL connection string | postgresql://postgres:postgres@db:5432/local_smart_doc |
-| CHROMA_PERSIST_DIRECTORY | ChromaDB data directory | /data/chroma |
-| OPENAI_API_KEY | OpenAI API key for embeddings | - |
-| EMBEDDING_MODEL | Embedding model to use | text-embedding-ada-002 |
+| DATABASE_URL | PostgreSQL connection | postgresql://postgres:postgres@db:5432/local_smart_doc |
+| CHROMA_PERSIST_DIRECTORY | ChromaDB data dir | /data/chroma |
+| OPENAI_API_KEY | OpenAI API key | - |
 
 ## API Endpoints
 
 - `POST /api/v1/documents` - Create document
 - `GET /api/v1/documents` - List documents
-- `GET /api/v1/documents/{id}` - Get document
-- `POST /api/v1/documents/{id}/process` - Process document (RAG)
-- `DELETE /api/v1/documents/{id}` - Delete document
-- `POST /api/v1/conversations` - Create conversation
-- `GET /api/v1/conversations` - List conversations
-- `POST /api/v1/qa` - Ask question (RAG Q&A)
+- `POST /api/v1/documents/{id}/process` - Process with RAG
+- `POST /api/v1/qa` - Ask question
 - `GET /api/v1/search` - Search documents
 
 ## Development
 
 ```bash
-# Backend only
+# Backend
 cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
-# Frontend only
+# Frontend
 cd frontend
 npm install
 npm run dev
 ```
-
-## License
-
-MIT

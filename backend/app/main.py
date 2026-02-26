@@ -2,13 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import get_settings
 from app.core.database import init_db
-from app.api.v1.endpoints import documents
+from app.api import documents
 
 settings = get_settings()
 
 app = FastAPI(
     title=settings.app_name,
-    debug=settings.debug,
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
