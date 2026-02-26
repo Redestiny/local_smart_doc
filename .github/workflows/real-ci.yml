@@ -1,10 +1,21 @@
-name: Real CI - Build and Test
+name: EV Knowledge Q&A System - CI/CD Pipeline
 
 on:
   pull_request:
     branches: [ main, master ]
   push:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '运行环境'
+        required: false
+        default: 'test'
+        type: choice
+        options:
+        - test
+        - staging
+        - production
 
 jobs:
   validate-structure:
@@ -16,28 +27,29 @@ jobs:
       
       - name: Validate project structure
         run: |
-          echo "=== 验证项目结构 ==="
+          echo "=== 电动汽车知识问答系统 - 项目结构验证 ==="
           echo ""
           echo "1. 检查必要目录:"
-          [ -d "backend" ] && echo "✅ backend目录存在" || echo "❌ backend目录缺失"
-          [ -d "frontend" ] && echo "✅ frontend目录存在" || echo "❌ frontend目录缺失"
-          [ -d ".github/workflows" ] && echo "✅ workflows目录存在" || echo "❌ workflows目录缺失"
+          [ -d "backend" ] && echo "✅ backend目录存在 (Python RAG后端)" || echo "❌ backend目录缺失"
+          [ -d "frontend" ] && echo "✅ frontend目录存在 (Next.js管理看板)" || echo "❌ frontend目录缺失"
+          [ -d ".github/workflows" ] && echo "✅ workflows目录存在 (CI/CD配置)" || echo "❌ workflows目录缺失"
           
           echo ""
           echo "2. 检查必要文件:"
-          [ -f "README.md" ] && echo "✅ README.md存在" || echo "❌ README.md缺失"
+          [ -f "README.md" ] && echo "✅ README.md存在 (项目文档)" || echo "❌ README.md缺失"
           [ -f ".gitignore" ] && echo "✅ .gitignore存在" || echo "❌ .gitignore缺失"
-          [ -f "docker-compose.yml" ] && echo "✅ docker-compose.yml存在" || echo "❌ docker-compose.yml缺失"
+          [ -f "docker-compose.yml" ] && echo "✅ docker-compose.yml存在 (容器编排)" || echo "❌ docker-compose.yml缺失"
           
           echo ""
-          echo "3. 文件统计:"
+          echo "3. 项目文件统计:"
           echo "总文件数: $(find . -type f -not -path './.git/*' | wc -l)"
-          echo "Python文件: $(find . -name '*.py' | wc -l)"
-          echo "TypeScript文件: $(find . -name '*.ts' -o -name '*.tsx' | wc -l)"
+          echo "Python文件 (后端逻辑): $(find . -name '*.py' | wc -l)"
+          echo "TypeScript文件 (前端界面): $(find . -name '*.ts' -o -name '*.tsx' | wc -l)"
           echo "配置文件: $(find . -name '*.json' -o -name '*.yml' -o -name '*.yaml' | wc -l)"
+          echo "文档文件: $(find . -name '*.md' -o -name '*.txt' | wc -l)"
 
   backend-test:
-    name: Backend Python Tests
+    name: Backend Python Tests (RAG系统)
     runs-on: ubuntu-latest
     needs: validate-structure
     steps:
@@ -51,10 +63,10 @@ jobs:
       
       - name: Check backend structure
         run: |
-          echo "=== 检查后端结构 ==="
+          echo "=== 检查RAG后端结构 ==="
           if [ -d "backend" ]; then
             cd backend
-            echo "后端目录内容:"
+            echo "电动汽车知识问答系统 - 后端目录:"
             ls -la
             echo ""
             
@@ -68,6 +80,9 @@ jobs:
               echo "fastapi>=0.104.0" >> requirements.txt
               echo "uvicorn[standard]>=0.24.0" >> requirements.txt
               echo "pydantic>=2.5.0" >> requirements.txt
+              echo "langchain>=0.1.0" >> requirements.txt
+              echo "chromadb>=0.4.0" >> requirements.txt
+              echo "sentence-transformers>=2.2.0" >> requirements.txt
             fi
             
             # 检查是否有Python文件
@@ -85,15 +100,16 @@ jobs:
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="Local Smart Doc API")
+app = FastAPI(title="EV Knowledge Q&A System API")
 
 class HealthCheck(BaseModel):
     status: str
     version: str = "1.0.0"
+    model: str = "DeepSeek-R1-8B"
 
 @app.get("/")
 async def root():
-    return {"message": "Local Smart Doc API"}
+    return {"message": "电动汽车知识问答系统 API", "description": "基于本地LLM和RAG的电动汽车领域知识问答"}
 
 @app.get("/health")
 async def health_check():
@@ -128,7 +144,7 @@ PYEOF
           fi
 
   frontend-check:
-    name: Frontend TypeScript Check
+    name: Frontend TypeScript Check (管理看板)
     runs-on: ubuntu-latest
     needs: validate-structure
     steps:
@@ -137,10 +153,10 @@ PYEOF
       
       - name: Check frontend structure
         run: |
-          echo "=== 检查前端结构 ==="
+          echo "=== 检查前端管理看板结构 ==="
           if [ -d "frontend" ]; then
             cd frontend
-            echo "前端目录内容:"
+            echo "电动汽车知识问答系统 - 前端管理看板目录:"
             ls -la
             echo ""
             
@@ -153,9 +169,10 @@ PYEOF
               echo "⚠️ package.json不存在，创建示例文件"
               cat > package.json << 'JSONEOF'
 {
-  "name": "local-smart-doc-frontend",
+  "name": "ev-knowledge-qa-frontend",
   "version": "1.0.0",
   "private": true,
+  "description": "电动汽车知识问答系统 - 管理看板",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -165,7 +182,10 @@ PYEOF
   "dependencies": {
     "next": "14.x",
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "@tanstack/react-query": "5.x",
+    "recharts": "2.x",
+    "shadcn/ui": "latest"
   },
   "devDependencies": {
     "@types/node": "20.x",
@@ -173,7 +193,10 @@ PYEOF
     "@types/react-dom": "18.x",
     "typescript": "5.x",
     "eslint": "8.x",
-    "eslint-config-next": "14.x"
+    "eslint-config-next": "14.x",
+    "tailwindcss": "3.x",
+    "postcss": "8.x",
+    "autoprefixer": "10.x"
   }
 }
 JSONEOF
@@ -270,26 +293,27 @@ TSEOF
     steps:
       - name: Generate CI Report
         run: |
-          echo "=== CI执行报告 ==="
+          echo "=== 电动汽车知识问答系统 - CI/CD执行报告 ==="
           echo ""
           echo "📊 作业状态:"
-          echo "  validate-structure: ${{ needs.validate-structure.result }}"
-          echo "  backend-test: ${{ needs.backend-test.result }}"
-          echo "  frontend-check: ${{ needs.frontend-check.result }}"
-          echo "  docker-build: ${{ needs.docker-build.result }}"
+          echo "  validate-structure: ${{ needs.validate-structure.result }} (项目结构验证)"
+          echo "  backend-test: ${{ needs.backend-test.result }} (RAG后端测试)"
+          echo "  frontend-check: ${{ needs.frontend-check.result }} (管理看板前端检查)"
+          echo "  docker-build: ${{ needs.docker-build.result }} (容器构建验证)"
           echo ""
-          echo "🎯 总结:"
+          echo "🎯 毕业设计项目质量评估:"
           if [[ "${{ needs.validate-structure.result }}" == "success" && \
                 "${{ needs.backend-test.result }}" == "success" && \
                 "${{ needs.frontend-check.result }}" == "success" && \
                 "${{ needs.docker-build.result }}" == "success" ]]; then
-            echo "✅ 所有检查通过！代码质量良好。"
+            echo "✅ 所有检查通过！项目代码质量良好，符合毕业设计要求。"
           else
-            echo "⚠️ 部分检查未通过，请查看详细日志。"
+            echo "⚠️ 部分检查未通过，请查看详细日志并修复问题。"
           fi
           echo ""
-          echo "💡 建议:"
-          echo "  1. 确保所有必要的文件都存在"
-          echo "  2. 修复任何语法错误"
-          echo "  3. 添加单元测试以提高代码质量"
-          echo "  4. 保持依赖项更新"
+          echo "💡 毕业设计建议:"
+          echo "  1. 完善项目文档和注释"
+          echo "  2. 添加更多单元测试和集成测试"
+          echo "  3. 优化RAG检索精度和问答质量"
+          echo "  4. 完善管理看板功能"
+          echo "  5. 准备系统演示和论文撰写"
